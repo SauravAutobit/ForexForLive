@@ -1,0 +1,44 @@
+/* Checkbox.css */
+
+/* Parent wrapper for click and state management */
+.custom-checkbox-wrapper {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The visible box of the checkbox (default state) */
+.custom-checkbox-box {
+  width: 18px;
+  height: 18px;
+  border-radius: 1.57px;
+  background: #D2D2D2;
+;
+  transition: all 0.2s ease;
+
+  /* ✅ ADD BORDER HERE to make it appear all the time */
+  border: 1px solid #4a4a50; /* Example default border color */
+}
+
+/* ❌ REMOVE the specific hover border rule */
+/* .custom-checkbox-wrapper:hover .custom-checkbox-box {
+  border: 2px solid #e63950;
+} */
+
+/* State for 'checked' */
+.custom-checkbox-wrapper.checked .custom-checkbox-box {
+  background: #3700ff;
+  border: none;
+}
+
+/* Checkmark inside the box */
+.custom-checkbox-checkmark {
+  position: absolute;
+  font-size: 14px;
+  color: white;
+  user-select: none;
+}
