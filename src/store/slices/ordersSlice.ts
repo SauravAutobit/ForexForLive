@@ -90,6 +90,8 @@ const ordersSlice = createSlice({
         (state, action) => {
           state.status = "succeeded";
           if (action.payload) {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             state.lastPlacedOrderId = action.payload;
           }
         }

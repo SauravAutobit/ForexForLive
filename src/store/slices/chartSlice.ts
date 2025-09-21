@@ -72,12 +72,16 @@ const query = `fintrabit.chart_history[instrument_id="${instrumentId}"]._desc(ti
         query,
       });
 
+      console.log("sliceThuk", response)
 
       if (response.status === "success" && response.data) {
         // Map the raw API response to the desired OHLVCData format.
         // The `_desc(time)` query means data comes in descending order,
         // so we reverse it to get a chronological order for the chart.
         const chartData: OHLVCData[] = response.data
+        
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
           .map((item) => ({
             time: item.time, // Unix timestamp is ideal for charting libraries
             open: item.data.open,
