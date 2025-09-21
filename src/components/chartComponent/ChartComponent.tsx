@@ -167,7 +167,7 @@ const MobileSidebar: React.FC<{
 
 interface ChartComponentProps {
   height: string;
-  instrumentId: string | null;
+  instrumentId?: string | null;
 }
 
 export default function ChartComponent({

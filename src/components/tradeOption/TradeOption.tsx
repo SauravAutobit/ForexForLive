@@ -5,7 +5,7 @@ type Props = {
   onClose?: () => void;
 };
 
-const TradeOption = ({ isOpen, onClose }: Props) => {
+const TradeOption = ({ isOpen }: Props) => {
   return (
     <AnimatePresence>
       {isOpen && (
